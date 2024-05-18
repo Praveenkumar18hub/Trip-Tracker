@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapcation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a href="./index.html" class="navbar-item">
+                    <img src="./assets/images/logo.png" alt="Mapcation Logo - A site for planning travel"
+                        style="max-height: 50px;">
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMapCation">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu" id="navbarMapCation">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary" href="#search-form">
+                                <strong>Start Planning</strong>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-light" href="#contact-us" class="navbar-item" class="contact">
+                                <strong>Contact Us</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container is-max-desktop form-border">
+        <form id="search-form">
+            <div class="field">
+                <label class="label">From (City Name)</label>
+                <input type="text" class="input" placeholder="Fredericton" id="from-airport">
+            </div>
+            <div class="field">
+                <label class="label">To (City Name)</label>
+                <input type="text" class="input" placeholder="Paris" id="to-airport">
+            </div>
+            <div class="field">
+                <label class="label">Departure Date</label>
+                <input type="text" class="input" id="datepicker" placeholder="" autocomplete="off">
+            </div>
+            <div class="field">
+                <label class="label">Return Date</label>
+                <input type="text" class="input" id="datepicker-2" placeholder="" autocomplete="off">
+            </div>
+            <div class="select">
+                <select id="traveler-number">
+                    <option>Number of travelers</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div> 
+            <div class="field has-text-centered my-5">
+                <button class="button is-primary" type="submit">Search</button>
+            </div>               
+        </form>
+    
+    </div>
+
+    <div class="columns">
+        <div class="card m-5 column">
+            <h2>Saved Itinerary</h2>
+            <div class="fav-places"></div>
+        </div>
+        <div class="column card m-5">
+            <h2>Recent Searches</h2>
+            <div class="recent-search"></div>
+        </div>
+    </div>
+
+
+    <div id="map" class="m-5">
+        
+    </div>
+
+    <div class="video-search-results m-5"></div>
+    <div class="column m-5" id="video-area"></div>
+    <div class="rows m-5" id="media-scroller" >
+        <div id="theVideos"></div>
+    </div>
+    
+    <div class="search-results m-5"></div>
+    <div class="columns">
+            <div class="tourist-search-results m-5 column"></div>
+            <div class="restaurant-results m-5 column"></div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="./assets/JS/flightSearch.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+    <script src="./assets/JS/script.js"></script>
+    <script src="./assets/JS/youtube.js"></script>
+</body>
+
+<footer id="contact-us" class="navbar-item" class="contact">
+    <h3 class="m-3">Contact Us</h3>
+
+    <ul class="m-3">
+        <li>
+             Email:<a href="mailto: aaturner1995@gmail.com"> aaturner1995@gmail.com</a>
+         </li>
+         <li>
+             <a href="https://github.com/aturner1995">Github</a>
+         </li>
+     
+     </ul>
+     <br>
+     <ul class="m-3">
+        <li>
+             Email:<a href="mailto:matt.zhao2010@gmail.com"> matt.zhao2010@gmail.com</a>
+         </li>
+         <li>
+             <a href="https://github.com/unbmattzhao">Github</a>
+         </li>
+     
+     </ul> 
+     <br>
+     <ul class="m-3">
+        <li>
+             Email:<a href="mailto:sehar.uzair23@gmail.com"> sehar.uzair23@gmail.com</a>
+         </li>
+         <li>
+             <a href="https://github.com//calligraphist">Github</a>
+         </li>
+     
+     </ul> 
+     <br>
+     <ul class="m-3">
+        <li>
+             Email:<a href="mailto:arashsaeedivarnoos@gmail.com"> arashsaeedivarnoos@gmail.com</a>
+         </li>
+         <li>
+             <a href="https://github.com/GITWholesale">Github</a>
+         </li>
+     
+     </ul> 
+     
+        </div>
+</footer>    
+</html>

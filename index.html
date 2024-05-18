@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapcation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+</head>
+<body>
+    <header>
+        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="navbar-brand">
+                <a href="#" class="navbar-item">
+                    <img src="./assets/images/logo.jpeg" alt="Mapcation Logo - A site for planning travel"
+                        style="max-height: 50px;">
+                </a>
+            </div>
+                <h1 style="text-align: center; margin: 50;">TRIPTRACKR</h1> 
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMapCation">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+        
+            <div class="navbar-menu" id="navbarMapCation">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary" href="./travel-planning.html">
+                                <strong>Track Your Trip</strong>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-light" href="#contact-us">
+                                <strong>Contact Us</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>  
+    </header>
+    
+
+    <div class="hero is-fullheight">
+        <div class="hero-body">
+              <div class="hero-text ">
+                <h1>A platform to plan a confident, luxury vacation!</h1>
+                <a class="button is-large is-primary" href="./travel-planning.html">Start Your Trip</a>
+              </div>
+        </div>
+    </div>
+
+    <div class="columns m-5 apigrid">
+        <div class="column is-one-quarter">
+            <div class="card"><a href="./travel-planning.html">
+                <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="./assets/images/airline.jpg" alt="Placeholder image">
+                </figure>
+                </div>
+                <div class="card-content">           
+
+                <div class="content">
+                    <p class="title is-4">Airline API Integration</p>    
+                    <br>           
+                    Mapcation integrates with a Amadeus API, displaying real-time flight data from multiple airlines, sorting and filtering results by price, duration, and airline.                </div>
+                </div></a>
+            </div>
+        </div>
+        <div class="column is-one-quarter">
+            <div class="card"><a href="./travel-planning.html">
+                <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="./assets/images/sview.jpg" alt="Placeholder image">
+                </figure>
+                </div>
+                <div class="card-content">           
+
+                <div class="content">
+                    <p class="title is-4">Foursquare API Integration</p>     
+                    <br>
+                    Mapcation showcases top-rated tourist attractions and activities with Foursquare API, allowing users to browse through photos, reviews, and ratings to plan their trip.          </div>
+                </div></a>
+            </div>
+        </div>
+        <div class="column is-one-quarter">
+            <div class="card"><a href="./travel-planning.html">
+                <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="./assets/images/navigation.jpg" alt="Placeholder image">
+                </figure>
+                </div>
+                <div class="card-content">           
+
+                <div class="content">
+                    <p class="title is-4">Open Street Maps API Integration</p>  
+                    <br>             
+                    Mapcation displays the location of the chosen destination and top-rated tourist attractions with Open Street Maps API, letting users zoom in and out on the map.
+                </div>
+                </div></a>
+            </div>
+        </div>
+        <div class="column is-one-quarter">
+            <div class="card"><a href="./travel-planning.html">
+                <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="./assets/images/youtube.jpg" alt="Placeholder image">
+                </figure>
+                </div>
+                <div class="card-content">           
+
+                <div class="content">
+                    <p class="title is-4">YouTube API Integration</p>               
+                    <br>
+                    Mapcation features YouTube API integration, allowing users to access videos about their chosen travel destination. Users can browse a selection of videos and watch them within the app.</div>
+                </div></a>
+            </div>
+        </div></a>
+    </div>
+
+    <div class="most-searched">
+        <h2 class="m-3">Most Searched:</h2>
+        <div class="columns m-3">
+            <div class="card column mx-2">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="./assets/images/HERO_UltimateRome_Hero_shutterstock789412159.jpg" alt="The colosseum in Rome">
+                        <button class="button is-primary search-btn">ROME</button>
+                    </figure>
+                </div>
+            </div>
+            <div class="card column mx-2">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="./assets/images/los-angeles-tourist-places-og.jpg" alt="Los Angeles Street">
+                        <button class="button is-primary search-btn">LOS ANGELES</button>
+                    </figure>
+                </div>
+            </div>
+            <div class="card column mx-2">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="./assets/images/600x400.jpg" alt="Paris and the Eiffel Tower">
+                        <button class="button is-primary search-btn">PARIS</button>
+                    </figure>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div id="map" class="m-5">
+        
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="./assets/JS/script.js"></script>
+    
+</body>
+
+<footer id="contact-us" class="navbar-item" class="contact">
+    <h3 class="m-3">Contact Us</h3>
+
+    <ul class="m-3">
+        <li>
+             Email: <a href="mailto: praveen181201@gmail.com"> praveen181201@gmail.com</a>
+         </li>
+         <li>
+             Github: <a href="https://github.com/Praveenkumar18hub"> Praveenkumar18hub</a>
+         </li>
+     
+     </ul>
+     <br>
+
+     
+        </div>
+</footer>  
+
+</html>
